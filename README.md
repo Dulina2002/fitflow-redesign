@@ -14,3 +14,9 @@ A human-centered mobile application redesign featuring AI-powered workout plans,
 - `backend/` - Core REST & WebSocket services
 - `ai-service/` - Machine learning & computer vision pipelines
 - `docs/` - Architecture diagrams, ADRs, and evaluation matrices
+
+## Student Details
+- **Name:** H.F.D Nadith
+- **Student ID:** IT23343184
+- **Group:** WE_01.01
+- **Module:** IT3060 - Human Computer Interaction (Semester 2 - 2026)
