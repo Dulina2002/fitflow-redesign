@@ -1,0 +1,21 @@
+name: FitFlow CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Documentation Structure
+        run: |
+          test -f README.md
+          test -f docs/comparison-matrix.md
+          test -f docs/adr/ADR-001.md
+          echo "All required lab documentation verified successfully."
