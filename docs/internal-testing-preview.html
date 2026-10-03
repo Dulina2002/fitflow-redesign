@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Internal Testing & Telemetry Dashboard - FitFlow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fa; margin: 0; padding: 25px; color: #202124; }
+  .card { background: white; border: 1px solid #dadce0; border-radius: 10px; padding: 24px; margin-bottom: 24px; max-width: 950px; box-shadow: 0 1px 3px rgba(60,64,67,0.1); }
+  h2 { margin-top: 0; color: #1a73e8; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+  .badge { background: #e6f4ea; color: #137333; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 12px; }
+  .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+  .metric-box { background: #f8f9fa; border: 1px solid #e8eaed; border-radius: 8px; padding: 14px; text-align: center; }
+  .metric-val { font-size: 22px; font-weight: bold; color: #202124; margin-top: 4px; }
+  .metric-lbl { font-size: 12px; color: #5f6368; text-transform: uppercase; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+  th, td { border: 1px solid #dadce0; padding: 10px 12px; text-align: left; }
+  th { background: #f8f9fa; font-weight: 600; }
+  .tag-closed { background: #e6f4ea; color: #137333; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 11px; }
+  .tag-high { background: #fce8e6; color: #c5221f; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 11px; }
+  .tag-med { background: #fef7e0; color: #b06000; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<!-- Figure 6.1 -->
+<div class="card" id="fig6-1">
+  <h2>Google Play Console &amp; TestFlight &gt; Internal Testing Track <span class="badge">&#10003; 100% Rollout (Active)</span></h2>
+  <div class="metric-grid">
+    <div class="metric-box"><div class="metric-lbl">Active Testers</div><div class="metric-val">28 / 30</div></div>
+    <div class="metric-box"><div class="metric-lbl">Crash-Free Sessions</div><div class="metric-val" style="color:#137333;">99.8%</div></div>
+    <div class="metric-box"><div class="metric-lbl">Avg Cold Start</div><div class="metric-val">840 ms</div></div>
+    <div class="metric-box"><div class="metric-lbl">Battery Drain / hr</div><div class="metric-val">3.2%</div></div>
+  </div>
+  <table>
+    <tr><th>Testing Track</th><th>Target Platform</th><th>Assigned Build</th><th>Tester Group</th><th>Release Status</th></tr>
+    <tr><td><strong>Internal Testing</strong></td><td>Android (Google Play)</td><td>v2.0.0 (Build 200)</td><td>Core QA &amp; Dev Team (15 testers)</td><td>Available via opt-in link</td></tr>
+    <tr><td><strong>TestFlight Internal</strong></td><td>iOS (App Store Connect)</td><td>v2.0.0 (Build 200)</td><td>Internal HCI Cohort (13 testers)</td><td>Installed &amp; Active</td></tr>
+  </table>
+</div>
+
+<!-- Figure 6.2 -->
+<div class="card" id="fig6-2">
+  <h2>Firebase Crashlytics &amp; QA Bug Tracker <span class="badge">&#10003; All Blockers Resolved</span></h2>
+  <table>
+    <tr><th>Bug ID</th><th>Severity</th><th>Observed Issue &amp; Hardware Target</th><th>Root Cause</th><th>Resolution Status</th></tr>
+    <tr>
+      <td><strong>BUG-101</strong></td>
+      <td><span class="tag-high">High</span></td>
+      <td>OOM crash on Camera meal scan (Pixel 6a)</td>
+      <td>Raw camera bitmaps retained in memory before inference</td>
+      <td><span class="tag-closed">&#10003; Resolved</span> (Downsampled bitmap via fast buffer)</td>
+    </tr>
+    <tr>
+      <td><strong>BUG-102</strong></td>
+      <td><span class="tag-med">Medium</span></td>
+      <td>Daily Flow workout state desync on offline resume</td>
+      <td>Async storage cache missed local optimistic lock</td>
+      <td><span class="tag-closed">&#10003; Resolved</span> (Added local SQLite rollback transaction)</td>
+    </tr>
+    <tr>
+      <td><strong>BUG-103</strong></td>
+      <td><span class="tag-med">Low</span></td>
+      <td>Dark mode text contrast ratio in Community feed</td>
+      <td>Hardcoded hex `#4A4A4A` on slate dark background</td>
+      <td><span class="tag-closed">&#10003; Resolved</span> (Tokenized dynamic semantic color scheme)</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
