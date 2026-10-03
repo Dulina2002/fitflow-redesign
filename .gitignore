@@ -6,3 +6,10 @@ venv/
 .DS_Store
 build/
 dist/
+
+# Security & Build Cache
+*.keystore
+*.jks
+frontend/android/gradle.properties
+.gradle/
+build/

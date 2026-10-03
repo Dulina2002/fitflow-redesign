@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple App Store Connect - FitFlow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; background: #f5f5f7; margin: 0; padding: 25px; color: #1d1d1f; }
+  .card { background: white; border: 1px solid #d2d2d7; border-radius: 12px; padding: 24px; margin-bottom: 24px; max-width: 900px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  h2 { margin-top: 0; color: #0071e3; font-size: 19px; border-bottom: 1px solid #e5e5ea; padding-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+  .field { margin-bottom: 16px; }
+  .label { font-weight: 600; font-size: 13px; color: #86868b; display: block; margin-bottom: 4px; }
+  .val { background: #fbfbfd; padding: 10px 14px; border-radius: 8px; font-size: 14px; border: 1px solid #d2d2d7; }
+  .tag { display: inline-block; background: #e8f2ff; color: #0071e3; padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 6px; font-weight: 500; }
+  .badge { background: #e3fbe3; color: #1b8738; padding: 5px 12px; border-radius: 14px; font-weight: 600; font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  th, td { border: 1px solid #e5e5ea; padding: 10px 12px; text-align: left; }
+  th { background: #f5f5f7; font-weight: 600; color: #1d1d1f; }
+</style>
+</head>
+<body>
+
+<!-- Figure 4.1 -->
+<div class="card" id="fig4-1">
+  <h2>App Store Connect &gt; App Information &gt; General & Subtitles <span class="badge">&#10003; Ready for Review</span></h2>
+  <div class="field"><span class="label">App Name</span><div class="val">FitFlow: AI Workout &amp; Fitness</div></div>
+  <div class="field"><span class="label">Subtitle (30 char limit)</span><div class="val">AI Fitness &amp; Meal Tracking</div></div>
+  <div class="field"><span class="label">Primary Category &amp; Secondary Category</span><div class="val"><span class="tag">Health &amp; Fitness</span><span class="tag">Lifestyle</span></div></div>
+  <div class="field"><span class="label">Keywords</span><div class="val">fitness,workout,ai trainer,calorie counter,meal tracker,gym planner,habits,nutrition,exercise</div></div>
+  <div class="field"><span class="label">Support &amp; Marketing URLs</span><div class="val">Support: https://fitflow.app/support &nbsp;|&nbsp; Marketing: https://fitflow.app</div></div>
+</div>
+
+<!-- Figure 4.2 -->
+<div class="card" id="fig4-2">
+  <h2>App Store Connect &gt; App Privacy &gt; Nutrition Labels <span class="badge">&#10003; Completed</span></h2>
+  <p style="font-size:13px; color:#6e6e73; margin-top:0;">Data Used to Track You: <strong>None</strong> &nbsp;|&nbsp; Data Linked to You:</p>
+  <table>
+    <tr><th>Data Type</th><th>Category</th><th>Linked to Identity?</th><th>Usage Purpose</th></tr>
+    <tr><td>Health &amp; Fitness</td><td>Workouts, Calorie Burn</td><td>Yes</td><td>App Functionality, AI Personalization</td></tr>
+    <tr><td>User Content</td><td>Meal Photos, Circle Posts</td><td>Yes</td><td>Computer Vision Nutrition, Social Feed</td></tr>
+    <tr><td>Contact Info</td><td>Email Address, Name</td><td>Yes</td><td>Account Authentication (Supabase Auth)</td></tr>
+    <tr><td>Diagnostics</td><td>Crash Logs, Performance</td><td>No</td><td>Analytics &amp; Reliability (Crashlytics)</td></tr>
+  </table>
+</div>
+
+<!-- Figure 4.3 -->
+<div class="card" id="fig4-3">
+  <h2>App Store Connect &gt; TestFlight &gt; Internal &amp; External Groups <span class="badge">&#9679; Active Build 200 (2.0.0)</span></h2>
+  <table>
+    <tr><th>Tester Group</th><th>Type</th><th>Testers</th><th>Status</th><th>Review State</th></tr>
+    <tr><td><strong>Internal Engineering &amp; QA</strong></td><td>Internal</td><td>15 Members</td><td>Active (90 days)</td><td>No Review Required</td></tr>
+    <tr><td><strong>External Beta Cohort (Study Users)</strong></td><td>External</td><td>135 Members</td><td>Invited</td><td>Approved by Apple</td></tr>
+  </table>
+  <div class="field" style="margin-top:14px;"><span class="label">TestFlight Feedback &amp; "What to Test" Notes</span>
+    <div class="val">Focus testing on: 1) AI Daily Flow routine generation; 2) Camera food scanning under low-light; 3) Joining community circles. Submit bugs via screenshot feedback.</div>
+  </div>
+</div>
+
+</body>
+</html>
