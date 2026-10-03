@@ -1,0 +1,34 @@
+apply plugin: "com.android.application"
+
+android {
+    namespace "com.fitflow.app"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.fitflow.app"
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode 200
+        versionName "2.0.0"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+}

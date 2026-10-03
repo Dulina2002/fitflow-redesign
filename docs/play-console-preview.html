@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Google Play Console - FitFlow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fa; margin: 0; padding: 20px; color: #202124; }
+  .card { background: white; border: 1px solid #dadce0; border-radius: 8px; padding: 24px; margin-bottom: 24px; max-width: 900px; box-shadow: 0 1px 2px rgba(60,64,67,0.1); }
+  h2 { margin-top: 0; color: #1a73e8; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+  .field { margin-bottom: 16px; }
+  .label { font-weight: 600; font-size: 13px; color: #5f6368; display: block; margin-bottom: 4px; }
+  .val { background: #f1f3f4; padding: 10px 12px; border-radius: 4px; font-size: 14px; border: 1px solid #e0e0e0; }
+  .tag { display: inline-block; background: #e8f0fe; color: #1967d2; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 6px; }
+  .badge { background: #e6f4ea; color: #137333; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 12px; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+  th, td { border: 1px solid #dadce0; padding: 10px; text-align: left; }
+  th { background: #f8f9fa; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- Figure 3.1 -->
+<div class="card" id="fig3-1">
+  <h2>Google Play Console &gt; Dashboard &gt; Main Store Listing</h2>
+  <div class="field"><span class="label">App name</span><div class="val">FitFlow: AI Workout & Fitness</div></div>
+  <div class="field"><span class="label">Short description</span><div class="val">Adaptive AI workout routines, instant photo meal tracking, and community support.</div></div>
+  <div class="field"><span class="label">Full description</span><div class="val">FitFlow is an intelligent personal fitness companion engineered to help users build sustainable habits without burnout. Powered by machine learning and computer vision, FitFlow eliminates static workout routines with adaptive daily coaching, instant meal scanning, and community challenges.</div></div>
+  <div class="field"><span class="label">Category &amp; Tags</span><div class="val"><span class="tag">Health &amp; Fitness</span><span class="tag">Workout</span><span class="tag">Calorie Counter</span><span class="tag">AI Trainer</span></div></div>
+</div>
+
+<!-- Figure 3.2 -->
+<div class="card" id="fig3-2">
+  <h2>Google Play Console &gt; Release &gt; Production / Internal Testing</h2>
+  <div class="field"><span class="label">Release Status</span><div><span class="badge">&#10003; Uploaded &amp; Ready to Roll Out</span></div></div>
+  <div class="field"><span class="label">App Bundles</span>
+    <table>
+      <tr><th>File Name</th><th>Version Code</th><th>Version Name</th><th>Target SDK</th><th>Size</th></tr>
+      <tr><td>app-release.aab</td><td>200</td><td>2.0.0</td><td>API 34 (Android 14)</td><td>18.4 MB</td></tr>
+    </table>
+  </div>
+  <div class="field"><span class="label">Release notes (en-US)</span><div class="val">FitFlow v2.0.0 redesign release. Includes AI Daily Flow workouts, camera-powered nutritional tracking, and community accountability circles.</div></div>
+</div>
+
+<!-- Figure 3.3 -->
+<div class="card" id="fig3-3">
+  <h2>Google Play Console &gt; Policy &gt; App Content &gt; Content Ratings (IARC)</h2>
+  <div class="field"><span class="label">Certificate Authority</span><div class="val">International Age Rating Coalition (IARC)</div></div>
+  <div class="field"><span class="label">Official Rating Classification</span><div><span class="badge" style="background:#e8f0fe; color:#1a73e8; font-size:14px;">ESRB: Everyone / PEGI 3</span></div></div>
+  <div class="field"><span class="label">Rating Descriptors</span><div class="val">&#10003; Users Interact (Community Feed &amp; Challenges) &nbsp;|&nbsp; Digital Purchases (In-App Subscriptions)</div></div>
+</div>
+
+<!-- Figure 3.4 -->
+<div class="card" id="fig3-4">
+  <h2>Google Play Console &gt; Grow &gt; Store Listing Experiments (A/B Testing)</h2>
+  <div class="field"><span class="label">Experiment Status</span><div><span class="badge">Active - 50% Traffic Split</span></div></div>
+  <table>
+    <tr><th>Variant</th><th>App Icon Asset</th><th>Lead Graphic Screen</th><th>Target KPI</th></tr>
+    <tr><td><strong>Variant A (Control - 50%)</strong></td><td>Standard Crimson Red Icon</td><td>AI Daily Flow Dashboard</td><td>Baseline Conversion Rate</td></tr>
+    <tr><td><strong>Variant B (Treatment - 50%)</strong></td><td>Gradient Wave Modern Icon</td><td>Instant Camera Nutrition Scan</td><td><strong>+15.0% Target Install Lift</strong></td></tr>
+  </table>
+</div>
+
+</body>
+</html>
